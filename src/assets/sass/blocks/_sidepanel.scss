@@ -1,0 +1,42 @@
+.sidepanel {
+  position: fixed;
+  top: 288px;
+  left: 0;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 240px;
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.facebook {
+  border-radius: 0px 4px 0px 0px;
+
+  background: rgb(58, 87, 154);
+}
+.twitter {
+  background: rgb(0, 171, 240);
+}
+.telegram {
+  background: rgb(36, 162, 224);
+}
+.pinterest {
+  background: rgb(205, 28, 31);
+}
+
+.reddit {
+  background: rgb(252, 70, 30);
+}
+.heart {
+  border-radius: 0px 0px 4px 0px;
+
+  background: rgb(249, 81, 73);
+}

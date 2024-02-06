@@ -1,0 +1,48 @@
+@import "libs/fonts";
+* {
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  background-color: rgb(252, 252, 252);
+  margin: 0;
+  padding: 0;
+}
+ul,
+li,
+h1 {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  margin: 0 auto;
+  width: 1170px;
+}
+
+@media (max-width: 1170px) {
+  .container {
+    padding: 0 15px;
+    width: 100%;
+  }
+}
+
+main {
+  margin-top: 110px;
+  padding-top: 46px;
+}
+
+@import "blocks/sidepanel";
+@import "blocks/header";
+@import "blocks/theme";
+@import "blocks/banner";
+@import "blocks/artical";
+@import "blocks/footer";
+
+@import "blocks/header_media";
+@import "blocks/sidepanel_media";
+@import "blocks/banner_media";
+@import "blocks/artical_media";
+@import "blocks/footer_media";

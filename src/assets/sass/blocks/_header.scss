@@ -1,0 +1,118 @@
+.header {
+  height: 50px;
+  background: linear-gradient(90deg, rgb(13, 208, 186), rgb(42, 134, 229) 100%);
+  &__wrapper {
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__menu {
+    display: flex;
+    &-item {
+      list-style: none;
+      margin-right: 31px;
+      &_link {
+        text-decoration: none;
+      }
+      span {
+        margin-left: 2.5px;
+        color: rgb(255, 255, 255);
+        font-family: "Red Hat Display";
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 18px;
+        letter-spacing: 0.5px;
+        text-align: left;
+      }
+    }
+  }
+  &__media {
+    display: flex;
+  }
+  &__socials {
+    display: flex;
+
+    &-icon {
+      margin-right: 5px;
+      width: 29px;
+      height: 29px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &_link {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.promo {
+  margin-top: 11px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 110px;
+  background: rgb(255, 255, 255);
+  nav {
+    display: flex;
+  }
+  &-logo {
+    margin-right: 61px;
+  }
+  &-nav {
+    display: flex;
+    &-item {
+      list-style: none;
+      margin-right: 28px;
+      &_link {
+        text-decoration: none;
+        color: rgb(42, 134, 229);
+        font-family: "Red Hat Display";
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 140%;
+        letter-spacing: 0.5px;
+        text-align: left;
+      }
+    }
+  }
+  &-form {
+    position: relative;
+  }
+  &-search {
+    width: 175.5px;
+    height: 42px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0px 32px 0px 21px;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 40px;
+
+    background: rgb(238, 238, 238);
+    color: rgb(117, 117, 117);
+    font-family: "Red Hat Display";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0%;
+    text-align: left;
+    &-icon {
+      img {
+        position: absolute;
+
+        right: 10px;
+        top: 10px;
+      }
+    }
+  }
+}
+
+.burger {
+  display: none;
+  &__menu {
+    display: none;
+  }
+}

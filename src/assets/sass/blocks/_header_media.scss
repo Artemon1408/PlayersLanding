@@ -1,0 +1,224 @@
+@media (max-width: 920px) {
+  .header {
+    &__menu {
+      &-item {
+        margin-right: 20px;
+      }
+    }
+  }
+  .promo {
+    &-logo {
+      margin-right: 30px;
+    }
+    &-nav {
+      &-item {
+        margin-right: 15px;
+      }
+    }
+    &-search {
+      width: 150px;
+    }
+  }
+}
+
+@media (max-width: 824px) {
+  .header {
+    &__menu {
+      &-item {
+        a {
+          span {
+            font-size: 13px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    &__wrapper {
+      position: relative;
+      z-index: 100;
+    }
+    &__menu {
+      &-item {
+        a {
+          span {
+            font-size: 14px;
+          }
+        }
+        &:last-child {
+          display: none;
+        }
+      }
+    }
+  }
+  .promo {
+    position: relative;
+    z-index: 1000;
+    &-logo {
+      margin-left: 24px;
+    }
+    &-nav {
+      display: none;
+    }
+    &-form {
+      display: none;
+      position: absolute;
+      top: -100%;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      z-index: 10;
+      &-active {
+        top: 0;
+      }
+    }
+  }
+  .burger {
+    display: block;
+    position: absolute;
+    width: 25.43px;
+    height: 21.45px;
+    top: 32px;
+    right: 20px;
+    span {
+      display: block;
+      height: 5px;
+      width: 100%;
+
+      background: rgb(42, 134, 229);
+      margin-bottom: 5px;
+      transition: 0.5s all;
+    }
+    &-active {
+      span {
+        margin-bottom: -5px;
+        &:nth-child(1) {
+          transform: translateY(3px) rotate(-45deg);
+        }
+        &:nth-child(2) {
+          display: none;
+        }
+        &:nth-child(3) {
+          transform: translateY(3px) rotate(45deg);
+        }
+      }
+    }
+    &__menu {
+      position: fixed;
+      z-index: 5;
+      top: -161%;
+      width: 100%;
+      min-height: 932px;
+      padding: 0 14px 24px 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      background: #fff;
+      &-active {
+        top: 161px;
+      }
+    }
+
+    &-form {
+      position: relative;
+      width: 100%;
+    }
+    &-search {
+      width: 100%;
+      height: 42px;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 0px 32px 0px 21px;
+      border: 1px solid rgb(255, 255, 255);
+      border-radius: 40px;
+
+      background: rgb(238, 238, 238);
+      color: rgb(117, 117, 117);
+      font-family: "Red Hat Display";
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 21px;
+      letter-spacing: 0%;
+      text-align: left;
+      &-icon {
+        img {
+          position: absolute;
+          z-index: 2000;
+          right: 26px;
+          top: 36px;
+        }
+      }
+    }
+    &-nav {
+      margin-top: 75px;
+      text-align: center;
+      &-item {
+        a {
+          text-decoration: none;
+          color: rgb(42, 134, 229);
+          font-family: "Red Hat Display";
+          font-size: 18px;
+          font-weight: 500;
+          line-height: 140%;
+          letter-spacing: 0.5px;
+          text-align: left;
+        }
+        margin-bottom: 58px;
+      }
+    }
+    &-b_lincks {
+      //   margin-top: 161px;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      &-link {
+        a {
+          text-decoration: none;
+
+          img {
+            margin-right: 2px;
+          }
+          span {
+            color: rgb(112, 112, 112);
+            font-family: "Red Hat Display";
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 18px;
+            letter-spacing: 0.5px;
+            text-align: left;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 679px) {
+  .header {
+    &__menu {
+      display: none;
+    }
+    &__media {
+      width: 100%;
+      justify-content: space-between;
+    }
+  }
+  .burger {
+    &-b_lincks {
+      flex-direction: column;
+      gap: 23px;
+    }
+    &-search {
+      &-icon {
+        img {
+          top: 11px;
+        }
+      }
+    }
+  }
+}

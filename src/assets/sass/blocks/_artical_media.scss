@@ -1,0 +1,45 @@
+@media (max-width: 1170px) {
+  .artical {
+    &__aside {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 810px) {
+  .artical {
+    &__item {
+      width: 350px;
+      height: 305px;
+      &-image {
+        img {
+          width: 100%;
+        }
+      }
+    }
+    &__cards {
+      grid-template: repeat(2, 300px) / repeat(2, 350px);
+      grid-auto-rows: auto;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .artical {
+    &__title {
+      text-align: center;
+    }
+    &__breadcrumbs {
+      &-crumb {
+        font-size: 13px;
+      }
+      &-page {
+        font-size: 13px;
+      }
+    }
+    &__cards {
+      justify-content: center;
+      grid-template-columns: 350px;
+    }
+  }
+}
