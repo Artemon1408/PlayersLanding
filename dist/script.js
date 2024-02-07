@@ -97,11 +97,17 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_burgermenus__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/burgermenus */ "./src/js/modules/burgermenus.js");
 /* harmony import */ var _modules_accordion__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/accordion */ "./src/js/modules/accordion.js");
+/* harmony import */ var _modules_calcRating__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/calcRating */ "./src/js/modules/calcRating.js");
+/* harmony import */ var _modules_themeToggle__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/themeToggle */ "./src/js/modules/themeToggle.js");
+
+
 
 
 window.addEventListener("DOMContentLoaded", () => {
   Object(_modules_burgermenus__WEBPACK_IMPORTED_MODULE_0__["default"])(".burger__menu", "[data-link]", ".burger");
   Object(_modules_accordion__WEBPACK_IMPORTED_MODULE_1__["default"])(".banner__burger");
+  Object(_modules_calcRating__WEBPACK_IMPORTED_MODULE_2__["default"])();
+  Object(_modules_themeToggle__WEBPACK_IMPORTED_MODULE_3__["default"])();
 });
 
 /***/ }),
@@ -167,6 +173,67 @@ const burgerMenus = (menuSelector, linkItem, burgerselector) => {
   });
 };
 /* harmony default export */ __webpack_exports__["default"] = (burgerMenus);
+
+/***/ }),
+
+/***/ "./src/js/modules/calcRating.js":
+/*!**************************************!*\
+  !*** ./src/js/modules/calcRating.js ***!
+  \**************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+const calcRating = () => {
+  const headRating = document.querySelector(".banner__nav-pagination"),
+    numberRatings = document.querySelectorAll(".banner__nav-pag"),
+    ratingBar = document.querySelector(".banner__rating-descr");
+  function showRating(value = 0) {
+    let span = document.createElement("span");
+    span.style.cssText = `color: rgb(249, 185, 54); 
+    font-family: "Red Hat Display"; 
+    font-size: 20px; 
+    font-weight: 700; 
+    line-height: 26px; 
+    letter-spacing: 0px; 
+    text-align: left;`;
+    span.innerText = value;
+    ratingBar.innerHTML = `Your rating: <span>${value}</span>`;
+    document.body.appendChild(span);
+  }
+  headRating.addEventListener("click", e => {
+    const target = e.target;
+    if (target && target.classList.contains("banner__nav-pag")) {
+      numberRatings.forEach((item, i) => {
+        if (target == item) {
+          showRating(i);
+        }
+      });
+    }
+  });
+};
+/* harmony default export */ __webpack_exports__["default"] = (calcRating);
+
+/***/ }),
+
+/***/ "./src/js/modules/themeToggle.js":
+/*!***************************************!*\
+  !*** ./src/js/modules/themeToggle.js ***!
+  \***************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+const themeToggle = () => {
+  const root = document.querySelector(":root"),
+    toggle = document.querySelector("#theme");
+  toggle.addEventListener("click", () => {
+    root.classList.toggle("dark");
+  });
+};
+/* harmony default export */ __webpack_exports__["default"] = (themeToggle);
 
 /***/ })
 

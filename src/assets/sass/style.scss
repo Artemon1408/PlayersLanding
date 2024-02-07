@@ -1,14 +1,18 @@
 @import "libs/fonts";
+@import "blocks/theme";
 * {
   box-sizing: border-box;
 }
 
 body {
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background-color 0.3s, color 0.3s;
   position: relative;
-  background-color: rgb(252, 252, 252);
   margin: 0;
   padding: 0;
 }
+
 ul,
 li,
 h1 {
@@ -36,7 +40,7 @@ main {
 
 @import "blocks/sidepanel";
 @import "blocks/header";
-@import "blocks/theme";
+
 @import "blocks/banner";
 @import "blocks/artical";
 @import "blocks/footer";

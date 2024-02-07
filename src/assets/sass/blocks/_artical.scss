@@ -10,7 +10,7 @@
     &-crumb {
       a {
         text-decoration: none;
-        color: rgb(112, 112, 112);
+        color: var(--text);
         font-family: "Red Hat Display";
         font-size: 14px;
         font-weight: 700;
@@ -21,7 +21,7 @@
       &::after {
         content: ">";
         margin: 0 2px;
-        color: rgb(112, 112, 112);
+        color: var(--text);
         font-family: "Red Hat Display";
         font-size: 14px;
         font-weight: 700;
@@ -50,7 +50,7 @@
   }
   &__descr {
     margin-top: 20px;
-    color: rgb(112, 112, 112);
+    color: var(--text);
     font-family: "Red Hat Display";
     font-size: 20px;
     font-weight: 400;
@@ -59,7 +59,7 @@
     text-align: left;
   }
   &__subtitle {
-    color: rgb(112, 112, 112);
+    color: var(--text);
     font-family: "Red Hat Display";
     font-size: 20px;
     font-weight: 700;
@@ -94,7 +94,7 @@
     border-radius: 20px;
 
     box-shadow: 0px 3px 16px 0px rgba(42, 134, 229, 0.08);
-    background: rgb(255, 255, 255);
+    background: var(--cards);
     &-title {
       margin-top: 18px;
       color: rgb(42, 134, 229);

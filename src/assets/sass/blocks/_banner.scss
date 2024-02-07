@@ -1,7 +1,8 @@
 .banner {
   border-radius: 40px;
   min-height: 234px;
-  background: rgb(255, 255, 255);
+  background: var(--banner-bg);
+  box-shadow: var(--banner-shadow);
   &__burger {
     display: none;
     &-menu {
@@ -57,6 +58,9 @@
   &__rating {
     display: flex;
     align-items: center;
+    &-media {
+      padding-right: 4px;
+    }
     &-animation {
       margin-right: 12px;
     }
@@ -137,18 +141,18 @@
       background: rgb(112, 112, 112);
     }
     &-pagination {
-      padding: 0 12px;
+      // padding: 0 12px;
       display: flex;
       align-items: center;
       height: 35px;
-
+      background: rgb(235, 246, 245);
+      border-left: 1px solid rgba(112, 112, 112, 0.15);
+      border-radius: 17px;
       background: linear-gradient(
         270deg,
         rgb(252, 197, 57),
         rgb(220, 74, 25) 100%
       );
-
-      border-radius: 17px;
     }
 
     &-pag {
@@ -158,24 +162,26 @@
       align-items: center;
       justify-content: center;
       border-left: 1px solid rgb(255, 255, 255);
+      color: rgb(255, 255, 255);
+
+      font-family: "Red Hat Display";
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 120%;
+      letter-spacing: 0.5px;
+      text-align: center;
+      cursor: pointer;
       &:first-child {
+        width: 100%;
         border: none;
       }
       &:nth-last-child(-n + 3) {
-        background: rgb(235, 246, 245);
-        border-left: 1px solid rgba(112, 112, 112, 0.15);
         color: rgb(112, 112, 112);
+        border-left: 1px solid rgb(112, 112, 112);
+        background: rgb(235, 246, 245);
       }
-
-      a {
-        text-decoration: none;
-        color: rgb(255, 255, 255);
-        font-family: "Red Hat Display";
-        font-size: 12px;
-        font-weight: 700;
-        line-height: 120%;
-        letter-spacing: 0.5px;
-        text-align: center;
+      &:last-child {
+        border-radius: 0 17px 17px 0;
       }
     }
   }
@@ -186,7 +192,3 @@
   border: none;
   background: linear-gradient(90deg, rgb(13, 208, 186), rgb(42, 134, 229) 100%);
 }
-
-// .not-grad {
-//   background: rgb(235, 246, 245);
-// }

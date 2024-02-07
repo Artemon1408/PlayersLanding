@@ -53,7 +53,7 @@
   justify-content: space-between;
   align-items: center;
   min-height: 110px;
-  background: rgb(255, 255, 255);
+  background: var(--bg);
   nav {
     display: flex;
   }
